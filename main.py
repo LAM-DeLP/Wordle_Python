@@ -1,8 +1,6 @@
 import random
 import tkinter
 
-
-
 answ = ["Guide","sence","Orbit"]
 
 def ext_char(input_list):
@@ -16,7 +14,6 @@ def create_matrix(list1,list2):
     
     return crspnd_list
 
-
 print(answ_char)
 print(input_char)
-print(create_matrix(input_char,answ_char))
+print(create_matrix(input_char,answ_char)[1])
