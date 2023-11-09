@@ -20,9 +20,5 @@ class datamaneger:
         with open(datamaneger.vocabfile,"r",encoding="UTF-8") as f:
             lines = f.readlines()
             self.word = lines[(random.randint(0,sum(1 for line in lines)))]
-
-
-manager = datamaneger()
-manager.choiceWord()
-print(manager.word)
+            self.word = self.word.replace('\n', '')
 
