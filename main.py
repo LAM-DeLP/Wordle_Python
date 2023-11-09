@@ -1,7 +1,7 @@
 import random
 import tkinter
 
-answ = ["Guide","sence","Orbit"]
+answ = ["guide","sence","orbit"]
 
 def ext_char(input_list):
     return [str(char) for char in input_list]
@@ -15,4 +15,5 @@ input_char = ext_char(input())
 
 print(answ_char)
 print(input_char)
-print(create_matrix(input_char,answ_char)[1])
+print(create_matrix(input_char,answ_char))
+
