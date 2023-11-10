@@ -1,21 +1,17 @@
-from config import datamanager
+import tkinter as tk
+from config import datamanager as dm
 
-manager = datamanager.datamaneger()
-manager.choiceWord()
-answ = manager.word + "a"
+class Wordle(tk.Frame):
+    def __init__(self, master = None):
+        super().__init__(master)
+        self.master.title("Wordle")
+        self.master.geometry("400x600")
+        self.master.resizable(False,False)
+        manager = dm.datamaneger()
 
-def ext_char(input_list):
-    return [str(char) for char in input_list]
 
-def create_matrix(list1,list2):
-    crspnd_list = [[j for j in range(len(list1)) if list1[i]==list2[j]] for i in range(len(list1))]
-    return crspnd_list
+if __name__ == "__main__":
 
-answ_char = ext_char(answ)
-input_char = ext_char(input())
-
-print(answ)
-print(answ_char)
-print(input_char)
-print(create_matrix(input_char,answ_char))
-
+    root = tk.Tk()
+    app = Wordle(master = root)
+    app.mainloop()
